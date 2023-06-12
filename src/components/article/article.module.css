@@ -78,7 +78,7 @@ article label {
 
 }
 
-article label input[type="checkbox"]:checked ~ .article-favorited-true {
+article label input[type="checkbox"]:checked ~ .articleFavoritedTrue {
  opacity: 1;
  animation: favorite-pop 0.5s ease-in-out;
 }
