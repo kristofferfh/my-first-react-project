@@ -1,0 +1,64 @@
+#article-container {
+ display: flex;
+ flex-flow: nowrap column;
+ gap: 1rem;
+}
+#article-container > article {
+ padding: 1rem;
+ border-bottom: 2px solid grey;
+}
+
+article > div {
+ display: flex; 
+}
+
+.article-title {
+ justify-content: space-between;
+}
+
+.article-content {
+ flex-flow: nowrap column;
+}
+
+.article-footer {
+ justify-content: space-between;
+}
+
+.article-user-details {
+ display: flex;
+ gap: 1rem;
+}
+.article-user-details img {
+ height: 100%;
+ aspect-ratio: 1;
+ border-radius: 50%;
+}
+.article-date-posted {
+ line-height: 1;
+ font-size: 12px;
+ color: gray;
+}
+
+/* favorite button functionality */
+article label input[type="checkbox"] {
+ display: none;
+}
+
+article label {
+ position: relative;
+ cursor: pointer;
+}
+
+.article-favorited-false {
+ position: absolute;
+ left: -2rem;
+}
+.article-favorited-true {
+ position: absolute;
+ opacity: 0;
+ left: -2rem;
+}
+
+article label input[type="checkbox"]:checked ~ .article-favorited-true {
+ opacity: 1;
+}

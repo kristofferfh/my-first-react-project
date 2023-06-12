@@ -1,8 +1,14 @@
 header {
  display: flex;
- justify-content: center;
+ justify-content: space-between;
  position: sticky;
  top:0;
  background-color: #111;
  margin-bottom: 25px;
+}
+
+nav > ul {
+ display: flex;
+ list-style: none;
+ gap: 1rem;
 }
