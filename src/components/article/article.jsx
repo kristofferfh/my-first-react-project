@@ -25,9 +25,14 @@ export function Article(props) {
     <p>{description}</p> 
    </div>
    <div className='article-footer'>
-    <a href={slug}>Full article</a>
-   
-   {/* tag list */}
+    <a href={slug}>Read more</a>
+    <span className='article-tags'>
+     {tagList.map((tag) => {
+      return (
+        <a href="#" key={tag.index+tag}>{tag}</a>
+        )
+    })}
+    </span>
    </div>
   </article>
  )
@@ -60,16 +65,15 @@ export function ArticleListStats(props) {
     )
 }
 
-function ArticleFavorited(props) {
-    const {favorited,favoritesCount} = props
 
-    // favorite function on 2dolist, for now, defaultChecked
+// favorite function on 2dolist, for now, defaultChecked
+function ArticleFavorited(props) {
     return (     
         <label>
-            <input type="checkbox" defaultChecked={favorited} />
+            <input type="checkbox" defaultChecked={props.favorited} />
             <i className="article-favorited-false">🖤</i>
             <i className="article-favorited-true">❤️</i>
-            <span>{favoritesCount}</span>
+            <span>{props.favoritesCount}</span>
         </label>
     )
 }
