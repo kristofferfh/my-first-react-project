@@ -30,9 +30,25 @@ export function ArticleList(props) {
  const { articles } = props
  return (
   <div id="article-container">
-   {articles.map((article, index) => (
-    <Article {...article} key={index} />
+   {articles.map((article) => (
+    <Article {...article} key={article.slug} />
    ))}
   </div>
  )
+}
+
+export function ArticleListStats(props) {
+    let articleTags = []
+    for (const article of props.articles) {
+        for (const tag of article.tagList) {
+            articleTags.push(tag)    
+        }
+    }
+    console.log(articleTags)
+
+    return (
+        <div id="article-stats">
+
+        </div>
+    )
 }
