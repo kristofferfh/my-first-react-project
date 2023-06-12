@@ -1,9 +1,9 @@
-#article-container {
+#articleContainer {
  display: flex;
  flex-flow: nowrap column;
  gap: 1rem;
 }
-#article-container > article {
+#articleContainer > article {
  padding: 1rem;
  border-bottom: 2px solid grey;
 }
@@ -12,43 +12,43 @@ article > div {
  display: flex; 
 }
 
-.article-title {
+.articleTitle {
  justify-content: space-between;
 }
 
-.article-content {
+.articleContent {
  flex-flow: nowrap column;
 }
 
-.article-footer {
+.articleFooter {
  justify-content: space-between;
 }
 
-.article-user-details {
+.articleUserDetails {
  display: flex;
  gap: 1rem;
 }
-.article-user-details img {
+.articleUserDetails img {
  height: 100%;
  aspect-ratio: 1;
  border-radius: 50%;
 }
-.article-author {
+.articleAuthor {
  text-decoration: none;
  color:orangered;
  font-size: larger;
 }
-.article-date-posted {
+.articleDatePosted {
  line-height: 1;
  font-size: 12px;
  color: gray;
 }
-.article-tags {
+.articleTags {
  display: flex;
  gap: 0.5rem;
 }
 
-.article-tags a {
+.articleTags a {
  background-color: rgb(90, 87, 255);
  color: antiquewhite;
  padding: 0.1rem 0.5rem;
@@ -67,11 +67,11 @@ article label {
  color: greenyellow;
 }
 
-.article-favorited-false {
+.articleFavoritedFalse {
  position: absolute;
  left: -2rem;
 }
-.article-favorited-true {
+.articleFavoritedTrue {
  position: absolute;
  opacity: 0;
  left: -2rem;

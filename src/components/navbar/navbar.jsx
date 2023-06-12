@@ -1,10 +1,10 @@
-import './navbar.css'
+import style from './navbar.module.css'
 import logo from '../../assets/img/bonfire.gif'
 
 export default function Navbar() {
  return (
   <header>
-   <div className='header-logo'>
+   <div className={style.headerLogo}>
     <img src={logo} alt="" />
    </div>
    <nav>

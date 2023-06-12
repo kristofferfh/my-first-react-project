@@ -15,13 +15,13 @@ nav > ul {
 nav a {
  text-decoration: none;
 }
-.header-logo {
+.headerLogo {
  height: 50px;
  aspect-ratio: 1;
  overflow: hidden;
 }
 
-.header-logo img {
+.headerLogo img {
  width: 200px;
  margin-left: -75px;
  margin-top: -70px;

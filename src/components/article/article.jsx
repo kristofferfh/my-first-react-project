@@ -1,16 +1,16 @@
-import './article.css'
+import style from './article.module.css'
 
 export function Article(props) {
  const {slug, title, description, body, tagList, createdAt, updatedAt, favorited, favoritesCount, author} = props
 
  return (
   <article>
-   <div className='article-title'>
-    <div className='article-user-details'>
+   <div className={style.articleTitle}>
+    <div className={style.articleUserDetails}>
      <img src={author.image} alt="" />
      <div>
-      <a className='article-author' href="#">{author.username}</a>
-      <div className='article-date-posted'>
+      <a className={style.articleAuthor} href="#">{author.username}</a>
+      <div className={style.articleDatePosted}>
         posted on:
         <p>{createdAt} </p>
       </div>
@@ -20,13 +20,13 @@ export function Article(props) {
      <ArticleFavorited {...props}/>
     </div>
    </div>
-   <div className='article-content'>
+   <div className={style.articleContent}>
     <h1>{title}</h1>
     <p>{description}</p> 
    </div>
-   <div className='article-footer'>
+   <div className={style.articleFooter}>
     <a href={slug}>Read more</a>
-    <span className='article-tags'>
+    <span className={style.articleTags}>
      {tagList.map((tag) => {
       return (
         <a href="#" key={tag.index+tag}>{tag}</a>
@@ -41,7 +41,7 @@ export function Article(props) {
 export function ArticleList(props) {
  const { articles } = props
  return (
-  <div id="article-container">
+  <div id={style.articleContainer}>
    {articles.map((article) => (
     <Article {...article} key={article.slug} />
    ))}
@@ -59,7 +59,7 @@ export function ArticleListStats(props) {
     // console.log(articleTags)
 
     return (
-        <div id="article-stats">
+        <div id={style.articleStats}>
 
         </div>
     )
@@ -71,8 +71,8 @@ function ArticleFavorited(props) {
     return (     
         <label>
             <input type="checkbox" defaultChecked={props.favorited} />
-            <i className="article-favorited-false">🖤</i>
-            <i className="article-favorited-true">❤️</i>
+            <i className={style.articleFavoritedFalse}>🖤</i>
+            <i className={style.articleFavoritedTrue}>❤️</i>
             <span>{props.favoritesCount}</span>
         </label>
     )
