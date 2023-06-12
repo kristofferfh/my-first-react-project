@@ -9,7 +9,7 @@ export function Article(props) {
     <div className='article-user-details'>
      <img src={author.image} alt="" />
      <div>
-      <a href="#">{author.username}</a>
+      <a className='article-author' href="#">{author.username}</a>
       <div className='article-date-posted'>
         posted on:
         <p>{createdAt} </p>

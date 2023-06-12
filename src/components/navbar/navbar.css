@@ -3,7 +3,7 @@ header {
  justify-content: space-between;
  position: sticky;
  top:0;
- background-color: #111;
+ background-color: #0e1217;
  margin-bottom: 25px;
 }
 
@@ -11,4 +11,18 @@ nav > ul {
  display: flex;
  list-style: none;
  gap: 1rem;
+}
+nav a {
+ text-decoration: none;
+}
+.header-logo {
+ height: 50px;
+ aspect-ratio: 1;
+ overflow: hidden;
+}
+
+.header-logo img {
+ width: 200px;
+ margin-left: -75px;
+ margin-top: -70px;
 }

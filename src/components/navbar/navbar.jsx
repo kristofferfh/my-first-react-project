@@ -1,11 +1,11 @@
 import './navbar.css'
+import logo from '../../assets/img/bonfire.gif'
 
 export default function Navbar() {
  return (
   <header>
-   <div>
-    <img src="" alt="" />
-    <p>logo</p>
+   <div className='header-logo'>
+    <img src={logo} alt="" />
    </div>
    <nav>
     <NavbarDropdown />
@@ -17,9 +17,9 @@ export default function Navbar() {
 function NavbarDropdown() {
  return (
   <ul>
-   <li>home</li>
-   <li>projects</li>
-   <li>contact me</li>
+   <li><a href="#">projects</a></li>
+   <li><a href="https://github.com/kristofferfh/my-first-react-project">github</a></li>
+   <li><a href="#">contact me</a></li>
   </ul>
  )
 }
