@@ -1,4 +1,5 @@
 import style from './article.module.css'
+import { useState } from 'react'
 
 export function Article(props) {
  const {slug, title, description, body, tagList, createdAt, updatedAt, favorited, favoritesCount, author} = props
@@ -50,30 +51,42 @@ export function ArticleList(props) {
 }
 
 export function ArticleListStats(props) {
-    let articleTags = []
-    for (const article of props.articles) {
-        for (const tag of article.tagList) {
-            articleTags.push(tag)    
-        }
-    }
-    // console.log(articleTags)
+ let articleTags = []
+ for (const article of props.articles) {
+  for (const tag of article.tagList) {
+   articleTags.push(tag)    
+  }
+ }
+ // console.log(articleTags)
 
-    return (
-        <div id={style.articleStats}>
+ return (
+  <div id={style.articleStats}>
 
-        </div>
-    )
+  </div>
+ )
 }
 
 
 // favorite function on 2dolist, for now, defaultChecked
 function ArticleFavorited(props) {
-    return (     
-        <label>
-            <input type="checkbox" defaultChecked={props.favorited} />
-            <i className={style.articleFavoritedFalse}>🖤</i>
-            <i className={style.articleFavoritedTrue}>❤️</i>
-            <span>{props.favoritesCount}</span>
-        </label>
-    )
+ const [fav, setFavorited] = useState(false);
+ let {favorited,favoritesCount} = props
+
+ if (fav) favoritesCount += 1;
+
+ function handleChange(e) {
+  setFavorited(e.target.checked)
+ }
+
+ return (     
+  <label>
+   <input type="checkbox" 
+    defaultChecked={favorited}
+    onChange={handleChange} 
+   />
+   <i className={style.articleFavoritedFalse}>🖤</i>
+   <i className={style.articleFavoritedTrue}>❤️</i>
+   <span>{favoritesCount}</span>
+  </label>
+ )
 }
