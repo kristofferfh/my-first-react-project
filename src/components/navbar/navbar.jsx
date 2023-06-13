@@ -1,5 +1,6 @@
 import style from './navbar.module.css'
 import logo from '../../assets/img/bonfire.gif'
+import SearchBox from '../searchbox/searchbox'
 
 export default function Navbar() {
  return (
@@ -8,6 +9,7 @@ export default function Navbar() {
     <img src={logo} alt="" />
    </div>
    <nav>
+    <SearchBox />
     <NavbarDropdown />
    </nav>
   </header>

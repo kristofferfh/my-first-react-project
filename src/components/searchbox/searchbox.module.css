@@ -1,0 +1,12 @@
+.searchResult {
+ position: relative;
+}
+
+.searchResult p {
+ position: absolute;
+ background-color: #212a35; 
+ color: antiquewhite;
+ padding: 10px;
+ width: 100%;
+ overflow: hidden;
+}

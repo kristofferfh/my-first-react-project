@@ -6,6 +6,10 @@ header {
  background-color: #0e1217;
  margin-bottom: 25px;
 }
+nav {
+ display: flex;
+ align-items: center;
+}
 
 nav > ul {
  display: flex;
