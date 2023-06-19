@@ -4,6 +4,7 @@ import { useState } from 'react'
 export function Article(props) {
  const {slug, title, description, body, tagList, createdAt, updatedAt, favorited, favoritesCount, author} = props
 
+
  return (
   <article>
    <div className={style.articleTitle}>
@@ -11,10 +12,7 @@ export function Article(props) {
      <img src={author.image} alt="" />
      <div>
       <a className={style.articleAuthor} href="#">{author.username}</a>
-      <div className={style.articleDatePosted}>
-        posted on:
-        <p>{createdAt} </p>
-      </div>
+      <ArticleDisplayDate {...props}/>
      </div>
     </div>
     <div>
@@ -89,4 +87,21 @@ function ArticleFavorited(props) {
    <span>{favoritesCount}</span>
   </label>
  )
+}
+
+function ArticleDisplayDate(props) {
+  const created = new Date(props.createdAt)
+  const edited = new Date(props.updatedAt)
+  const isEdited = props.createdAt !== props.updatedAt
+
+  console.log(isEdited);
+  return (
+    <div className={style.articleDateDetails}>
+      <p>{created.toUTCString()}{isEdited?" (Edited)":""}</p>
+      {isEdited?(<span>
+        <p>Edited by {props.author.username} on:</p>
+        <p>{edited.toUTCString()}</p>  
+      </span>):("")}
+    </div>
+  )
 }

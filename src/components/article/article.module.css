@@ -27,6 +27,7 @@ article > div {
 .articleUserDetails {
  display: flex;
  gap: 1rem;
+ width: 50%;
 }
 .articleUserDetails img {
  height: 100%;
@@ -38,11 +39,26 @@ article > div {
  color:orangered;
  font-size: larger;
 }
-.articleDatePosted {
+.articleDateDetails {
+ position: relative;
  line-height: 1;
  font-size: 12px;
  color: gray;
 }
+.articleDateDetails > span {
+ position: absolute;
+ visibility: hidden;
+ width: 100%;
+ background-color: #212933;
+ color: #fff;
+ text-align: center;
+ padding: 5px;
+ border-radius: 6px;
+}
+.articleDateDetails:hover > span {
+ visibility: visible;
+}
+
 .articleTags {
  display: flex;
  gap: 0.5rem;
