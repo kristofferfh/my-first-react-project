@@ -9,9 +9,9 @@ export default function SearchBox() {
  }
 
  return (
-  <div>
-   <input type="text" name="" id="" onChange={updateText} value={text}/>
-   <div id="searchResult" className={text.length === 0 ? "hidden" : style.searchResult}>
+  <div id={style.navSearchBox}>
+   <input type="text" name="navSearchResult" id={style.navSearchInput} onChange={updateText} value={text}/>
+   <div id={style.navSearchResult} className={text.length === 0 ? "hidden" : style.searchResult}>
     <p>{text}</p>
    </div>
   </div>

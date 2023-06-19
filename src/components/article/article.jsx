@@ -94,7 +94,6 @@ function ArticleDisplayDate(props) {
   const edited = new Date(props.updatedAt)
   const isEdited = props.createdAt !== props.updatedAt
 
-  console.log(isEdited);
   return (
     <div className={style.articleDateDetails}>
       <p>{created.toUTCString()}{isEdited?" (Edited)":""}</p>

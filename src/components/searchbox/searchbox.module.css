@@ -1,12 +1,24 @@
-.searchResult {
- position: relative;
+#navSearchBox {
+position: relative;
 }
 
-.searchResult p {
+#navSearchInput {
+
+}
+
+#navSearchResult {
  position: absolute;
+}
+
+#navSearchResult p {
  background-color: #212a35; 
  color: antiquewhite;
  padding: 10px;
  width: 100%;
  overflow: hidden;
+ visibility: 1;
+}
+
+#navSearchInput:not(:focus) + #navSearchResult {
+ display: none;
 }
