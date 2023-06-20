@@ -4,8 +4,8 @@ import { Article } from './article'
 import style from './article.module.css'
 
 
-// text example from https://hygraph.com/blog/react-pagination
-// used for working demo
+// test example from https://hygraph.com/blog/react-pagination
+// used for working demo and understanding base principles
 
 function Paginate({postsPerPage,totalPosts,paginate,previousPage,nextPage}) {
  const pageNumbers = []
@@ -73,3 +73,7 @@ const nextPage = () => {
  </div>
  )
 }
+
+
+
+// todo! https://stackoverflow.com/questions/70683967/how-to-use-pagination-with-react-router-v6

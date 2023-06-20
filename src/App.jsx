@@ -1,4 +1,4 @@
-// import { useState } from 'react'
+// note to self, github can't use BrowserRoute, use HashRoute instead
 import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import './styles/app.css'
 
