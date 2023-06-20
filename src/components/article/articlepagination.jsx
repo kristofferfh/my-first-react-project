@@ -29,20 +29,14 @@ function Paginate({postsPerPage,totalPosts,paginate,previousPage,nextPage}) {
  )
 }
 
-
-
 export function ArticlePagination(props) {
  const { articles } = props
  const [currentPage, setCurrentPage] = useState(1);
  const [postsPerPage] = useState(3);
- 
-
 
  const indexOfLastPost = currentPage * postsPerPage;
  const indexOfFirstPost = indexOfLastPost - postsPerPage;
  const currentPosts = articles.slice(indexOfFirstPost, indexOfLastPost);
-
- console.log(currentPosts);
 
  const paginate = (pageNumber) => {
   setCurrentPage(pageNumber);
@@ -55,7 +49,7 @@ export function ArticlePagination(props) {
 }
 
 const nextPage = () => {
-  if (currentPage !== Math.ceil(blogPosts.length / postsPerPage)) {
+  if (currentPage !== Math.ceil(articles.length / postsPerPage)) {
      setCurrentPage(currentPage + 1);
   }
 }
