@@ -1,5 +1,5 @@
 // import { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import './styles/app.css'
 
 import Navbar from './components/navbar/navbar'
@@ -13,12 +13,12 @@ export default function App() {
       <Navbar />
       <Router>
         <Routes>
-          <Route index element={<p>test0</p>} />
+          <Route index element={<Blog />} />
           <Route path='article'>
-            <Route path=':articleSlug' element={<p>test1</p>} />
+            <Route path=':articleSlug' element={<p>test</p>} />
           </Route>
-          <Route path='projects' element={<p>test2</p>} />
-          <Route path='contact' element={<p>test3</p>} />
+          <Route path='projects' element={<Projects />} />
+          <Route path='contact' element={<Contact />} />
           <Route path='*' element={<h1 >Four 😫hh four</h1>} />
         </Routes>
       </Router>    
