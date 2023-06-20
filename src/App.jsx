@@ -13,13 +13,13 @@ export default function App() {
       <Navbar />
       <Router>
         <Routes>
-          <Route index element={<Blog />} />
-          {/* <Route path='article'>
-            <Route path=':articleSlug' element={<p>test</p>} />
-          </Route> */}
-          <Route path='projects' element={<Projects />} />
-          <Route path='contact' element={<Contact />} />
-          {/* <Route path='*' element={<h1 >Four 😫hh four</h1>} /> */}
+          <Route index element={<p>test0</p>} />
+          <Route path='article'>
+            <Route path=':articleSlug' element={<p>test1</p>} />
+          </Route>
+          <Route path='projects' element={<p>test2</p>} />
+          <Route path='contact' element={<p>test3</p>} />
+          <Route path='*' element={<h1 >Four 😫hh four</h1>} />
         </Routes>
       </Router>    
     </>
