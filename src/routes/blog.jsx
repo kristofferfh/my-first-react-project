@@ -6,8 +6,8 @@ export default function Blog() {
  return (
   <>
    <main>
-    {/* <ArticleListStats {...articleData} /> */}
     <ArticlePagination {...articleData} />
+    <ArticleListStats {...articleData} />
     {/* <ArticleList {...articleData} /> */}
    </main>
   </>
