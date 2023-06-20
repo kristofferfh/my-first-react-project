@@ -4,7 +4,6 @@ import { useState } from 'react'
 export function Article(props) {
  const {slug, title, description, body, tagList, createdAt, updatedAt, favorited, favoritesCount, author} = props
 
-
  return (
   <article>
    <div className={style.articleTitle}>
@@ -49,23 +48,25 @@ export function ArticleList(props) {
 }
 
 export function ArticleListStats(props) {
- let articleTags = []
+ // Generate a list over all article tags
+ // (example) rerum: 1
+ let articleTagsObj = {}
  for (const article of props.articles) {
   for (const tag of article.tagList) {
-   articleTags.push(tag)    
+    articleTagsObj[tag] = articleTagsObj[tag] + 1 || 1
   }
  }
- // console.log(articleTags)
 
+ // todo add eventlistener and sort articles by tags
  return (
   <div id={style.articleStats}>
-
+    {Object.entries(articleTagsObj).map((key) => (
+      <p key={key}><span>{key[1]}x</span>{key[0]}</p>
+    ))}
   </div>
  )
 }
 
-
-// favorite function on 2dolist, for now, defaultChecked
 function ArticleFavorited(props) {
  const [fav, setFavorited] = useState(false);
  let {favorited,favoritesCount} = props

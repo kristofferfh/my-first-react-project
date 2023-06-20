@@ -65,11 +65,13 @@ article > div {
 }
 
 .articleTags a {
- background-color: rgb(90, 87, 255);
+ background-color: #004FFF;
  color: antiquewhite;
- padding: 0.1rem 0.5rem;
- border-radius: 15%;
+ margin: 0.1rem;
+ padding: 0 5px;
+ border-radius: 5px;
  text-decoration: none;
+ font-size: small;
 }
 
 /* favorite button functionality */
@@ -118,4 +120,49 @@ article label input[type="checkbox"]:checked ~ .articleFavoritedTrue {
  100% {
   transform: scale(1.1);
  }
+}
+
+#articleStats {
+ display: flex;
+ flex-flow: row wrap;
+ justify-content: center;
+ border: 1px solid grey;
+ border-radius: 5px;
+}
+#articleStats p {
+ background-color: #004FFF;
+ color: antiquewhite;
+ margin: 0.1rem;
+ padding: 0 5px;
+ border-radius: 5px;
+ text-decoration: none;
+ font-size: small;
+}
+#articleStats span {
+ display: none;
+ margin-right: 5px;
+}
+#articleStats p:hover {
+ background-color: rgb(104, 101, 255);
+}
+#articleStats p:hover > span {
+ display: inline-block;
+}
+#articlePagination {
+display: flex;
+flex-flow: row nowrap;
+justify-content: center;
+gap: 0.5rem;
+margin: 1rem;
+}
+
+#articlePagination button {
+ padding: 5px 15px;
+ background-color: #004FFF;
+ border: none;
+ border-radius: 3px;
+}
+
+#articlePagination button:hover {
+ background-color: #2d6fff;
 }
