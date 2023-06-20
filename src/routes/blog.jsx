@@ -6,7 +6,7 @@ export default function Blog() {
  return (
   <>
    <main>
-    <ArticlePagination {...articleData} />
+    {/* <ArticlePagination {...articleData} /> */}
     <ArticleListStats {...articleData} />
     {/* <ArticleList {...articleData} /> */}
    </main>
