@@ -1,8 +1,8 @@
 /**
- * 
- * @param {*} props.href Link dest
- * @param {*} props.name Link name
- * @returns url link
+ * @param {{
+ *  href: URL
+ *  children: React.JSX.Element}} props
+ * @returns
  */
 export default function ExternalLink(props) {
  return (

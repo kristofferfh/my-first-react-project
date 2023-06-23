@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { ArticleDisplayDate, ArticleFavorited } from '../components/article/article';
 import style from '../components/article/article.module.css'
 
-export function ArticlePage(props) {
+export function ArticlePage() {
  const slug = useLocation().pathname.replace("/article/", "")
  const [isLoading, setIsLoading] = useState(true);
  const [data, setData] = useState();
