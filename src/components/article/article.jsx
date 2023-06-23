@@ -1,5 +1,6 @@
 import style from './article.module.css'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export function Article(props) {
  const {slug, title, description, body, tagList, createdAt, updatedAt, favorited, favoritesCount, author} = props
@@ -23,7 +24,7 @@ export function Article(props) {
     <p>{description}</p> 
    </div>
    <div className={style.articleFooter}>
-    <a href={slug}>Read more</a>
+    <Link to={`article/${slug}`}>Read more</Link>
     <span className={style.articleTags}>
      {tagList.map((tag) => {
       return (
@@ -67,7 +68,7 @@ export function ArticleListStats(props) {
  )
 }
 
-function ArticleFavorited(props) {
+export function ArticleFavorited(props) {
  const [fav, setFavorited] = useState(false);
  let {favorited,favoritesCount} = props
 
@@ -90,7 +91,7 @@ function ArticleFavorited(props) {
  )
 }
 
-function ArticleDisplayDate(props) {
+export function ArticleDisplayDate(props) {
   const created = new Date(props.createdAt)
   const edited = new Date(props.updatedAt)
   const isEdited = props.createdAt !== props.updatedAt
